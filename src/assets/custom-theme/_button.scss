@@ -1,0 +1,12 @@
+    @use './variable' as variable;
+    $button-line-height: 80px;
+    $button-padding: 0 18px;
+
+    @each $type in variable.$types {
+      .noemin-theme {
+        .mat-#{$type}-button {
+          padding: $button-padding;
+          line-height: $button-line-height;
+        }
+      }
+    }
