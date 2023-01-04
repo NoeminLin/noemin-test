@@ -1,12 +1,37 @@
-    @use './variable' as variable;
-    $button-line-height: 80px;
-    $button-padding: 0 18px;
+    @use './variable'as variable;
+    $button-line-height: 20px;
+    $button-padding: 8px 16px;
+    $border-radius: 4px;
 
     @each $type in variable.$types {
-      .noemin-theme {
+      .aiii-theme {
+
+        // 因為有樣式是用Style調整，所以要增加Class層級
         .mat-#{$type}-button {
-          padding: $button-padding;
-          line-height: $button-line-height;
+          @if $type !=icon {
+            padding: $button-padding;
+            line-height: $button-line-height;
+            border-radius: $border-radius;
+          }
+
+          .mat-icon {
+            width: 26px;
+            height: 26px;
+            object-fit: contain;
+            margin: -5px 1px;
+            font-size: 22px;
+          }
+
+          &[color="basic"] {
+            color: #333333;
+          }
+
+          @if $type !=stroked {
+            &:hover {
+              filter: brightness(95%) grayscale(10%);
+            }
+          }
+
         }
       }
     }

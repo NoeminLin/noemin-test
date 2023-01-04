@@ -1,14 +1,16 @@
 {
   "name": "noemin-test",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "main": "dist/noemin-test/style.css",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "copy": "cp dist/noemin-test/styles.css file/styles.css && cd file"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "~13.3.0",
     "@angular/cdk": "^13.3.9",

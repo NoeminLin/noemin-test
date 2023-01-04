@@ -1,88 +1,69 @@
 <div class="aiii-theme">
-  <mat-sidenav-container class="sidenav-container">
-    <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
-      <mat-toolbar>Menu</mat-toolbar>
-      <mat-nav-list>
-        <a mat-list-item href="#">Link 1</a>
-        <a mat-list-item href="#">Link 2</a>
-        <a mat-list-item href="#">Link 3</a>
-      </mat-nav-list>
-    </mat-sidenav>
-    <mat-sidenav-content>
-      <mat-toolbar color="primary">
-        <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
-          *ngIf="isHandset$ | async">
-          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-        </button>
-        <span>noemin-test</span>
-      </mat-toolbar>
-      <!-- Add Content Here -->
-    </mat-sidenav-content>
-  </mat-sidenav-container>
-
   <div>
     <section>
       <div class="example-label">Basic</div>
       <div class="example-button-row">
-        <button mat-button>Basic</button>
-        <button mat-button color="primary">Primary</button>
-        <button mat-button color="accent">Accent</button>
-        <button mat-button color="warn">Warn</button>
+        <button mat-button color="basic">Basic</button>
+        <button mat-button color="primary">預設狀態</button>
+        <!-- <button mat-button color="accent">預設狀態</button> -->
+        <button mat-button color="warn">警告危險</button>
         <button mat-button disabled>Disabled</button>
-        <a mat-button href="https://www.google.com/" target="_blank">Link</a>
+        <a mat-button target="_blank">Link</a>
       </div>
     </section>
-    <mat-divider></mat-divider>
-    <section>
+    <!-- <section>
       <div class="example-label">Raised</div>
       <div class="example-button-row">
         <button mat-raised-button>Basic</button>
-        <button mat-raised-button color="primary">Primary</button>
-        <button mat-raised-button color="accent">Accent</button>
-        <button mat-raised-button color="warn">Warn</button>
+        <button mat-raised-button color="primary">預設狀態</button>
+        <button mat-raised-button color="accent">預設狀態</button>
+        <button mat-raised-button color="warn">警告危險</button>
         <button mat-raised-button disabled>Disabled</button>
-        <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
+        <a mat-raised-button target="_blank">Link</a>
       </div>
     </section>
-    <mat-divider></mat-divider>
+    <mat-divider></mat-divider> -->
     <section>
       <div class="example-label">Stroked</div>
       <div class="example-button-row">
-        <button mat-stroked-button>Basic</button>
-        <button mat-stroked-button color="primary">Primary</button>
-        <button mat-stroked-button color="accent">Accent</button>
-        <button mat-stroked-button color="warn">Warn</button>
+        <button mat-stroked-button color="basic">預設狀態</button>
+        <button mat-stroked-button color="basic">
+          <mat-icon>add</mat-icon>預設狀態
+        </button>
+        <button mat-stroked-button color="primary">預設狀態</button>
+        <button mat-stroked-button color="primary">
+          <mat-icon>add</mat-icon>預設狀態
+        </button>
+        <!-- <button mat-stroked-button color="accent">預設狀態</button> -->
+        <button mat-stroked-button color="warn">警告危險</button>
         <button mat-stroked-button disabled>Disabled</button>
-        <a mat-stroked-button href="https://www.google.com/" target="_blank">Link</a>
+        <a mat-stroked-button target="_blank">Link</a>
       </div>
     </section>
-    <mat-divider></mat-divider>
     <section>
       <div class="example-label">Flat</div>
       <div class="example-button-row">
-        <button mat-flat-button>Basic</button>
-        <button mat-flat-button color="primary">Primary</button>
-        <button mat-flat-button color="accent">Accent</button>
-        <button mat-flat-button color="warn">Warn</button>
+        <button mat-flat-button color="basic">Basic</button>
+        <button mat-flat-button color="primary">預設狀態</button>
+        <!-- <button mat-flat-button color="accent">預設狀態</button> -->
+        <button mat-flat-button color="warn">警告危險</button>
         <button mat-flat-button disabled>Disabled</button>
-        <a mat-flat-button href="https://www.google.com/" target="_blank">Link</a>
+        <a mat-flat-button target="_blank">Link</a>
       </div>
     </section>
-    <mat-divider></mat-divider>
     <section>
       <div class="example-label">Icon</div>
       <div class="example-button-row">
         <div class="example-flex-container">
-          <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
-            <mat-icon>more_vert</mat-icon>
+          <button mat-icon-button color="basic" aria-label="Example icon button with a vertical three dot icon">
+            <mat-icon>account_circle</mat-icon>
           </button>
           <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
             <mat-icon>home</mat-icon>
           </button>
-          <button mat-icon-button color="accent" aria-label="Example icon button with a menu icon">
+          <!-- <button mat-icon-button color="accent" aria-label="Example icon button with a menu icon">
             <mat-icon>menu</mat-icon>
-          </button>
+          </button> -->
           <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
             <mat-icon>favorite</mat-icon>
           </button>
@@ -92,8 +73,7 @@
         </div>
       </div>
     </section>
-    <mat-divider></mat-divider>
-    <section>
+    <!-- <section>
       <div class="example-label">FAB</div>
       <div class="example-button-row">
         <div class="example-flex-container">
@@ -120,8 +100,8 @@
         </div>
       </div>
     </section>
-    <mat-divider></mat-divider>
-    <section>
+    <mat-divider></mat-divider> -->
+    <!-- <section>
       <div class="example-label">Mini FAB</div>
       <div class="example-button-row">
         <div class="example-flex-container">
@@ -147,6 +127,65 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
   </div>
 </div>
+
+<section>
+  <mat-spinner></mat-spinner>
+</section>
+
+
+<section>
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</section>
+
+
+<section>
+  <p>
+    <span matBadge="4" matBadgeOverlap="false">Text with a badge</span>
+  </p>
+
+  <p>
+    <span matBadge="1" matBadgeSize="large">Text with large badge</span>
+  </p>
+
+  <p>
+    Button with a badge on the left
+    <button mat-raised-button color="primary" matBadge="8" matBadgePosition="before" matBadgeColor="accent">
+      Action
+    </button>
+  </p>
+
+  <p>
+    Button toggles badge visibility
+    <button mat-raised-button matBadge="7">
+      Hide
+    </button>
+  </p>
+
+  <p>
+    Icon with a badge
+    <mat-icon matBadge="15" matBadgeColor="warn">home</mat-icon>
+    <!-- Include text description of the icon's meaning for screen-readers -->
+    <span class="cdk-visually-hidden">
+      Example with a home icon with overlaid badge showing the number 15
+    </span>
+  </p>
+
+</section>
+
+
+<section class="example-section">
+  <mat-checkbox class="example-margin">Checked</mat-checkbox>
+  <mat-checkbox class="example-margin">Indeterminate</mat-checkbox>
+  <mat-checkbox class="example-margin" >Disabled</mat-checkbox>
+</section>
+
+<section class="example-section">
+  <label class="example-margin">Align:</label>
+  <mat-radio-group>
+    <mat-radio-button class="example-margin" value="after">After</mat-radio-button>
+    <mat-radio-button class="example-margin" value="before">Before</mat-radio-button>
+  </mat-radio-group>
+</section>
