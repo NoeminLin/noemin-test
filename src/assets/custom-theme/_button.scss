@@ -1,11 +1,12 @@
     @use './variable'as variable;
+
+    // 帶調整成設計稿設定
     $button-line-height: 20px;
     $button-padding: 8px 16px;
     $border-radius: 4px;
 
     @each $type in variable.$types {
       .aiii-theme {
-
         // 因為有樣式是用Style調整，所以要增加Class層級
         .mat-#{$type}-button {
           @if $type !=icon {
@@ -13,6 +14,7 @@
             line-height: $button-line-height;
             border-radius: $border-radius;
           }
+
 
           .mat-icon {
             width: 26px;
@@ -22,11 +24,30 @@
             font-size: 22px;
           }
 
+          // 添加color=basic設定
           &[color="basic"] {
             color: #333333;
           }
 
+          // icon按鈕
+          @if $type==icon {
+          }
+
+          // 框線按鈕
+          @if $type==stroked {
+            &:not(.mat-button-disabled) {
+              border-color: #DADCE0;
+            }
+          }
+
+          // 實色按鈕
           @if $type !=stroked {
+            // &[color="primary"] {
+            //   &:hover {
+            //     background-color: #0081A1;
+            //   }
+            // }
+
             &:hover {
               filter: brightness(95%) grayscale(10%);
             }
